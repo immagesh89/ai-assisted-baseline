@@ -1,8 +1,10 @@
 using Api.Features.Products;
+using Api.Features.SavedItems;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
+builder.Services.AddSingleton<ISavedItemRepository, InMemorySavedItemRepository>();
 
 builder.Services.AddCors(options =>
 {
@@ -17,6 +19,7 @@ var app = builder.Build();
 app.UseCors();
 
 app.MapProductEndpoints();
+app.MapSavedItemEndpoints();
 
 app.Run();
 

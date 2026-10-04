@@ -1,3 +1,4 @@
+import { SaveButton } from "../savedItems/SaveButton";
 import type { Product } from "./types";
 
 interface ProductCardProps {
@@ -11,6 +12,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <h3>{product.name}</h3>
       <p>{product.description}</p>
       <p className="price">${product.price.toFixed(2)}</p>
+      <SaveButton productId={product.id} />
     </article>
   );
 }
