@@ -1,0 +1,46 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+}
+
+.product-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.product-card .category {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-card .price {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.status-message {
+  padding: 16px;
+  color: #666;
+}
